@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --color-primario: #0A3871;
+    --color-secundario: #E9ECF8;
+    --color-terciario: #F3F5FC;
+    --color-texto-primario: #495057;
+    --color-texto-secundario: #343A40;
+    --color-active-primario: #356EA9;
+
+    --fuente-inter: 'Inter', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-inter);
+    text-decoration: none;
+    background: var(--color-terciario);
+}
+
+body{
+    height: 100%;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    position: absolute;
+    margin: 40px 0px 0px 40px;
+}
+
+.logo_alura{
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
+    background-color: white;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    background: url(../imagenes/portada.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.encryptor{
+    width: 60%;
+    margin: 168px 0px 0px 140px;
+    background: transparent;
+    
+}
+
+
+.encrypt{
+    width: 660px;
+    height: 288px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    outline: none;
+    border: 1px solid var(--color-texto-primario);
+    border-radius: 15px;
+    resize: none;
+}
+
+.encrypt::placeholder, :focus{
+    color: var(--color-primario);
+}
+
+.encryptor_add{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    top: 500px;
+    background: transparent;
+}
+
+.text_add{
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    opacity: 0.8;
+    color: var(--color-texto-primario);
+    background: transparent;
+}
+
+.encryptor_buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 536px;
+    background: transparent;
+}
+
+.btn_encrypt{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-terciario);
+    background: var(--color-primario);
+    border: 1px solid var(--color-primario);
+    border-radius: 24px;
+    cursor: pointer;    
+}
+
+.btn_encrypt:active{
+    background: var(--color-active-primario);
+}
+
+.btn_decrypt{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-primario);
+    background: var(--color-secundario);
+    border: 1px solid var(--color-primario);
+    border-radius: 24px;
+    cursor: pointer;    
+}
+.btn_copy:active,
+.btn_decrypt:active{
+    background: var(--color-terciario);
+}
+
+.card{
+    width: 270px;
+    height: 580px;
+    background: var(--color-secundario);
+    position: relative;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align: center;
+    box-shadow: 10px 24px 32px -8px var(--color-texto-primario);
+}
+
+.card_container{
+    width: 250px;
+    margin: auto;
+    margin-top: 50%;
+    background: var(--color-secundario);
+}
+
+.image_container{
+    background: var(--color-secundario);
+}
+
+.text_1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--color-texto-secundario);
+    background: var(--color-secundario);
+}
+
+.text_2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-texto-primario);
+    background: var(--color-secundario);
+}
+
+.evaluar{
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--color-texto-primario);
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+}
+
+.evaluar:focus{
+    outline: none;
+}
+
+.btn_copy{
+    width: 224px;
+    height: 67px;
+    margin: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    padding: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: var(--color-secundario);
+    border: 1px solid var(--color-primario);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn_encrypt:hover,
+.btn_decrypt:hover,
+.btn_copy:hover{
+    transform: scale(0.97);
+}
+
+
+footer{
+    margin-top: 30px;
+    padding: 10px;
+    border-top: 2px solid var(--color-secundario);
+    color: var(--color-texto-primario);
+    text-align: center;
+    height: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    background: transparent;
+}
+
+.text_footer{
+    background: transparent;
+}
+
+.linkedin{
+    background: transparent;
+}
+
+.github{
+    background: transparent;
+}
+
+.linkedin:hover{
+    color: var(--color-secundario);
+    opacity: 0.6;
+}
+
+.github:hover{
+    color: var(--color-secundario);
+    opacity: 0.6;
+}
+
+
+
+@media(max-width: 1250px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .encryptor{
+        margin: 168px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .encryptor_buttons{
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .encryptor_add{
+        position: inherit;
+        margin: 15px;
+    }
+
+    .card{
+        width: 665px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .card_container{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .image_container{
+        display: none;
+    }
+
+    .btn_copy{
+        position: inherit;
+        width: 100%;
+    }
+
+    .evaluar{
+        width: 100%;
+        height: 210px;
+        padding: 10px;
+    }
+}
+
+
+@media(max-width: 720px){
+
+    header .logo_alura{
+        width: 100%;
+        background: white;
+        padding: 2px;
+    }
+
+    .encrypt{
+        width: 90%;
+        font-size: 24px;
+    }
+
+    .encryptor_buttons{
+        display: grid;
+        gap: 21px;
+    }
+
+    .card{
+        width: 90%;
+    }
+
+    .text_footer{
+        font-size: 20px;
+    }
+}
